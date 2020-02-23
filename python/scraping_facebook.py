@@ -40,7 +40,7 @@ def parser_facebook_akun(post):
 
     tab_pendidikan = akun.findAll("ul", {"class":"uiList fbProfileEditExperiences _4kg _4ks"})[1].findAll("li", {"class":"_43c8 _5f6p fbEditProfileViewExperience experience"})
     sekolah = []
-    for pend in pendidikan:
+    for pend in tab_pendidikan:
         sekolah.append(pend.text)
 
     tab_kota_sekarang = akun.findAll("ul", {"class":"uiList fbProfileEditExperiences _4kg _4ks"})[2].find("li", {"id":"current_city"}).find("span", {"class":"_2iel _50f7"})
